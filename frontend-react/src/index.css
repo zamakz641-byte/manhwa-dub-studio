@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-root: #0a0b0d;
+    --bg-surface: #0d0f14;
+    --bg-card: #14161c;
+    --bg-card-hover: #1a1c22;
+    --border-subtle: #1f2128;
+    --border-highlight: #2c303b;
+    --text-primary: #e0e0e0;
+    --text-secondary: #9da3af;
+    --text-muted: #63666d;
+    --brand-accent: #fbbf24;
+    --brand-accent-hover: #fcd34d;
+    --studio-green: #22c55e;
+    --studio-yellow: #fbbf24;
+    --studio-red: #ef4444;
+  }
+
+  body {
+    background-color: #0a0b0d;
+    color: #e0e0e0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    letter-spacing: -0.01em;
+  }
+}
+
+/* Custom Bento Grid Scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #0d0f14;
+}
+::-webkit-scrollbar-thumb {
+  background: #1f2128;
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2a2e38;
+}
+
+/* Audio Waveform Animations */
+@keyframes audio-pulse {
+  0%, 100% { height: 15%; opacity: 0.5; }
+  50% { height: 95%; opacity: 1; }
+}
+
+.animate-wave-1 { animation: audio-pulse 0.8s ease-in-out infinite; }
+.animate-wave-2 { animation: audio-pulse 1.1s ease-in-out infinite 0.2s; }
+.animate-wave-3 { animation: audio-pulse 0.9s ease-in-out infinite 0.4s; }
+.animate-wave-4 { animation: audio-pulse 1.3s ease-in-out infinite 0.1s; }
+.animate-wave-5 { animation: audio-pulse 0.7s ease-in-out infinite 0.3s; }
+
+/* Bento accents and glow */
+.bento-card {
+  background-color: #14161c;
+  border: 1px solid #1f2128;
+  border-radius: 0.75rem;
+}
+
+.bento-card:hover {
+  border-color: #2b2f3a;
+}
+
+.bento-accent-btn {
+  background-color: #fbbf24;
+  color: #000000;
+  font-weight: 800;
+  transition: all 0.15s ease-in-out;
+}
+
+.bento-accent-btn:hover {
+  background-color: #fcd34d;
+}
+
+.bento-pill-active {
+  background-color: rgba(251, 191, 36, 0.12);
+  color: #fbbf24;
+  border: 1px solid rgba(251, 191, 36, 0.3);
+}
