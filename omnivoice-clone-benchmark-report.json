@@ -1,0 +1,34 @@
+{
+  "date": "2026-09-06",
+  "engine": "OmniVoice 0.2.1",
+  "device": "CUDA",
+  "settings": {
+    "num_step": 12,
+    "language": "fr",
+    "speed": 1.05,
+    "persistent_worker": true
+  },
+  "cold_start": {
+    "model_load_seconds_observed": [39.573, 50.755],
+    "note": "Chargement unique; le worker garde ensuite le modèle en mémoire."
+  },
+  "longer_default_voice_test": {
+    "voice": "fr_naturelle_06",
+    "generated_audio_seconds": 18.44,
+    "warm_wall_seconds": 2.296,
+    "realtime_factor": 0.125,
+    "estimated_minutes_for_60_minutes_audio": 7.47
+  },
+  "cached_short_tests": [
+    {"voice": "fr_ben", "audio_seconds": 8.40, "wall_seconds": 14.642, "realtime_factor": 1.743},
+    {"voice": "fr_naturelle_06", "audio_seconds": 6.76, "wall_seconds": 1.081, "realtime_factor": 0.160},
+    {"voice": "fr_goat", "audio_seconds": 6.22, "wall_seconds": 1.072, "realtime_factor": 0.172},
+    {"voice": "fr_cinematic_male", "audio_seconds": 9.90, "wall_seconds": 6.157, "realtime_factor": 0.622},
+    {"voice": "fr_epic_female", "audio_seconds": 10.36, "wall_seconds": 6.350, "realtime_factor": 0.613}
+  ],
+  "interpretation": {
+    "default_natural_voice": "Approximately 8 to 10 minutes of warm generation per hour of output audio in this test.",
+    "voice_variation": "Some cloned voices converge much more slowly. Short-line extrapolation is not a production benchmark.",
+    "compatibility": "OmniVoice recreates its own prompt from each Qwen reference WAV and transcript; Qwen .pt prompt files are not reused."
+  }
+}

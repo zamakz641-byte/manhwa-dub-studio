@@ -1,0 +1,456 @@
+{
+  "version": "2.0.0",
+  "migration_strategy": "Direct 1:1 Preservation with Modern Studio Architecture",
+  "preserved_count": 65,
+  "changed_count": 0,
+  "mappings": {
+    "cleanupBtn": {
+      "legacy_role": "Bouton de nettoyage du cache temporaire du projet",
+      "new_id": "cleanupBtn",
+      "element": "button",
+      "location": "Project Header / Studio Toolbar",
+      "status": "preserved"
+    },
+    "createProject": {
+      "legacy_role": "Bouton de validation du formulaire de création de projet",
+      "new_id": "createProject",
+      "element": "button",
+      "location": "Nouveau Projet Modal",
+      "status": "preserved"
+    },
+    "downloadPack": {
+      "legacy_role": "Bouton d'export du pack JSON pour réécriture ChatGPT",
+      "new_id": "downloadPack",
+      "element": "button",
+      "location": "Workbench Toolbar / Segments Action Bar",
+      "status": "preserved"
+    },
+    "dropzone": {
+      "legacy_role": "Zone de glisser-déposer de la vidéo source",
+      "new_id": "dropzone",
+      "element": "label",
+      "location": "Studio Source Import Panel",
+      "status": "preserved"
+    },
+    "emptyStudio": {
+      "legacy_role": "Vue état vide du studio lorsqu'aucun projet n'est sélectionné",
+      "new_id": "emptyStudio",
+      "element": "div",
+      "location": "Studio Main View",
+      "status": "preserved"
+    },
+    "exportNowBtn": {
+      "legacy_role": "Bouton de déclenchement de l'encodage vidéo final",
+      "new_id": "exportNowBtn",
+      "element": "button",
+      "location": "Inspector Export Card",
+      "status": "preserved"
+    },
+    "exportPreset": {
+      "legacy_role": "Sélecteur de préconfiguration d'export vidéo (résolution/codec/fps)",
+      "new_id": "exportPreset",
+      "element": "select",
+      "location": "Inspector Export Card",
+      "status": "preserved"
+    },
+    "exportPresetInfo": {
+      "legacy_role": "Texte descriptif du preset sélectionné avec estimation de taille",
+      "new_id": "exportPresetInfo",
+      "element": "small",
+      "location": "Inspector Export Card",
+      "status": "preserved"
+    },
+    "eyebrow": {
+      "legacy_role": "Sur-titre de la vue courante (Espace de travail / Studio / Système)",
+      "new_id": "eyebrow",
+      "element": "p",
+      "location": "Global Studio Topbar",
+      "status": "preserved"
+    },
+    "generateAllBtn": {
+      "legacy_role": "Bouton de génération TTS de tous les segments en batch",
+      "new_id": "generateAllBtn",
+      "element": "button",
+      "location": "Segments Toolbar",
+      "status": "preserved"
+    },
+    "globalDot": {
+      "legacy_role": "Voyant lumineux d'état des moteurs locaux (vert/orange)",
+      "new_id": "globalDot",
+      "element": "i",
+      "location": "Sidebar Local Engine Footer",
+      "status": "preserved"
+    },
+    "globalStatus": {
+      "legacy_role": "Texte d'état global du diagnostic des moteurs",
+      "new_id": "globalStatus",
+      "element": "small",
+      "location": "Sidebar Local Engine Footer",
+      "status": "preserved"
+    },
+    "healthList": {
+      "legacy_role": "Liste compacte des modules runtime sur l'accueil",
+      "new_id": "healthList",
+      "element": "div",
+      "location": "Dashboard Health Card",
+      "status": "preserved"
+    },
+    "heroNew": {
+      "legacy_role": "Bouton d'appel à l'action principal de création de projet",
+      "new_id": "heroNew",
+      "element": "button",
+      "location": "Dashboard Hero Card",
+      "status": "preserved"
+    },
+    "homeView": {
+      "legacy_role": "Conteneur de la vue Projets / Accueil",
+      "new_id": "homeView",
+      "element": "section",
+      "location": "Main Workspace Router",
+      "status": "preserved"
+    },
+    "importPanel": {
+      "legacy_role": "Panneau d'import vidéo source initiale",
+      "new_id": "importPanel",
+      "element": "div",
+      "location": "Studio Workbench",
+      "status": "preserved"
+    },
+    "kpiEngine": {
+      "legacy_role": "Indicateur KPI de vitesse d'inférence audio (ex: 1.93x temps réel)",
+      "new_id": "kpiEngine",
+      "element": "b",
+      "location": "Dashboard KPI Bar",
+      "status": "preserved"
+    },
+    "kpiMinutes": {
+      "legacy_role": "Indicateur KPI de durée totale de contenu traité",
+      "new_id": "kpiMinutes",
+      "element": "b",
+      "location": "Dashboard KPI Bar",
+      "status": "preserved"
+    },
+    "kpiProjects": {
+      "legacy_role": "Indicateur KPI du nombre de projets en bibliothèque",
+      "new_id": "kpiProjects",
+      "element": "b",
+      "location": "Dashboard KPI Bar",
+      "status": "preserved"
+    },
+    "kpiReady": {
+      "legacy_role": "Indicateur KPI du nombre de doublages terminés prêts",
+      "new_id": "kpiReady",
+      "element": "b",
+      "location": "Dashboard KPI Bar",
+      "status": "preserved"
+    },
+    "newLanguage": {
+      "legacy_role": "Sélecteur de langue cible dans le dialogue nouveau projet",
+      "new_id": "newLanguage",
+      "element": "select",
+      "location": "Nouveau Projet Modal",
+      "status": "preserved"
+    },
+    "newProject": {
+      "legacy_role": "Bouton d'ouverture du dialogue nouveau projet dans la topbar",
+      "new_id": "newProject",
+      "element": "button",
+      "location": "Global Topbar",
+      "status": "preserved"
+    },
+    "newTitle": {
+      "legacy_role": "Champ de saisie du titre du nouveau projet",
+      "new_id": "newTitle",
+      "element": "input",
+      "location": "Nouveau Projet Modal",
+      "status": "preserved"
+    },
+    "newVoice": {
+      "legacy_role": "Sélecteur de voix par défaut dans le dialogue nouveau projet",
+      "new_id": "newVoice",
+      "element": "select",
+      "location": "Nouveau Projet Modal",
+      "status": "preserved"
+    },
+    "nextAction": {
+      "legacy_role": "Bouton d'action contextuelle de la prochaine étape suggérée",
+      "new_id": "nextAction",
+      "element": "button",
+      "location": "Inspector Next Step Card",
+      "status": "preserved"
+    },
+    "nextCopy": {
+      "legacy_role": "Description textuelle de la prochaine action recommandée",
+      "new_id": "nextCopy",
+      "element": "p",
+      "location": "Inspector Next Step Card",
+      "status": "preserved"
+    },
+    "nextSegments": {
+      "legacy_role": "Bouton de pagination vers la page suivante de segments",
+      "new_id": "nextSegments",
+      "element": "button",
+      "location": "Segments Pagination Bar",
+      "status": "preserved"
+    },
+    "nextTitle": {
+      "legacy_role": "Titre de l'étape recommandée suivante",
+      "new_id": "nextTitle",
+      "element": "h3",
+      "location": "Inspector Next Step Card",
+      "status": "preserved"
+    },
+    "pageTitle": {
+      "legacy_role": "Titre principal de la page affichée dans la barre supérieure",
+      "new_id": "pageTitle",
+      "element": "h1",
+      "location": "Global Topbar",
+      "status": "preserved"
+    },
+    "prevSegments": {
+      "legacy_role": "Bouton de pagination vers la page précédente de segments",
+      "new_id": "prevSegments",
+      "element": "button",
+      "location": "Segments Pagination Bar",
+      "status": "preserved"
+    },
+    "progressBar": {
+      "legacy_role": "Barre de progression globale du projet actif",
+      "new_id": "progressBar",
+      "element": "i",
+      "location": "Inspector Global Progress Bar",
+      "status": "preserved"
+    },
+    "progressLabel": {
+      "legacy_role": "Pourcentage textuel de la progression du projet",
+      "new_id": "progressLabel",
+      "element": "strong",
+      "location": "Inspector Global Progress Bar",
+      "status": "preserved"
+    },
+    "projectDialog": {
+      "legacy_role": "Modale de création de nouveau projet",
+      "new_id": "projectDialog",
+      "element": "dialog",
+      "location": "Global Overlay Container",
+      "status": "preserved"
+    },
+    "projectDuration": {
+      "legacy_role": "Affichage de la durée totale de la vidéo du projet",
+      "new_id": "projectDuration",
+      "element": "span",
+      "location": "Project Banner Meta",
+      "status": "preserved"
+    },
+    "projectForm": {
+      "legacy_role": "Formulaire de soumission du projet",
+      "new_id": "projectForm",
+      "element": "form",
+      "location": "Nouveau Projet Modal",
+      "status": "preserved"
+    },
+    "projectGrid": {
+      "legacy_role": "Grille d'affichage des cartes de projet",
+      "new_id": "projectGrid",
+      "element": "div",
+      "location": "Dashboard Recent Projects Section",
+      "status": "preserved"
+    },
+    "projectLang": {
+      "legacy_role": "Affichage du couple de langues (ex: AUTO → FR)",
+      "new_id": "projectLang",
+      "element": "span",
+      "location": "Project Banner Meta",
+      "status": "preserved"
+    },
+    "projectName": {
+      "legacy_role": "Nom du projet actif affiché en tête de studio",
+      "new_id": "projectName",
+      "element": "h2",
+      "location": "Project Banner",
+      "status": "preserved"
+    },
+    "projectSearch": {
+      "legacy_role": "Champ de recherche et filtrage des projets",
+      "new_id": "projectSearch",
+      "element": "input",
+      "location": "Topbar Global Search",
+      "status": "preserved"
+    },
+    "projectStatus": {
+      "legacy_role": "Badge de statut actuel du projet (Brouillon, Analysé, etc.)",
+      "new_id": "projectStatus",
+      "element": "span",
+      "location": "Project Banner",
+      "status": "preserved"
+    },
+    "projectVoice": {
+      "legacy_role": "Sélecteur de la voix active assignée au projet",
+      "new_id": "projectVoice",
+      "element": "select",
+      "location": "Project Banner Meta & Voice Cast Studio",
+      "status": "preserved"
+    },
+    "refreshRuntime": {
+      "legacy_role": "Bouton d'actualisation du diagnostic système",
+      "new_id": "refreshRuntime",
+      "element": "button",
+      "location": "Sidebar & Runtime View",
+      "status": "preserved"
+    },
+    "runtimeGrid": {
+      "legacy_role": "Grille détaillée des statuts des moteurs locaux (FFmpeg, Qwen...)",
+      "new_id": "runtimeGrid",
+      "element": "div",
+      "location": "Runtime Diagnostic View",
+      "status": "preserved"
+    },
+    "runtimeScore": {
+      "legacy_role": "Compteur de moteurs opérationnels (ex: 5/5)",
+      "new_id": "runtimeScore",
+      "element": "span",
+      "location": "Health Card & Runtime Diagnostic",
+      "status": "preserved"
+    },
+    "runtimeView": {
+      "legacy_role": "Conteneur de la vue Runtime & Dépendances",
+      "new_id": "runtimeView",
+      "element": "section",
+      "location": "Main Workspace Router",
+      "status": "preserved"
+    },
+    "scriptFile": {
+      "legacy_role": "Champ d'import de fichier script JSON réécrit par ChatGPT",
+      "new_id": "scriptFile",
+      "element": "input",
+      "location": "Segments Toolbar / ChatGPT Hub",
+      "status": "preserved"
+    },
+    "segmentList": {
+      "legacy_role": "Conteneur de la liste des segments narratifs",
+      "new_id": "segmentList",
+      "element": "div",
+      "location": "Workbench Segments Workspace",
+      "status": "preserved"
+    },
+    "segmentPageLabel": {
+      "legacy_role": "Indicateur de page courante et total (ex: 1 / 4)",
+      "new_id": "segmentPageLabel",
+      "element": "span",
+      "location": "Segments Pagination Bar",
+      "status": "preserved"
+    },
+    "segmentSearch": {
+      "legacy_role": "Champ de recherche textuelle dans les segments",
+      "new_id": "segmentSearch",
+      "element": "input",
+      "location": "Segments Toolbar",
+      "status": "preserved"
+    },
+    "segmentsPanel": {
+      "legacy_role": "Panneau principal de révision et édition des segments",
+      "new_id": "segmentsPanel",
+      "element": "div",
+      "location": "Studio Workbench",
+      "status": "preserved"
+    },
+    "solveBtn": {
+      "legacy_role": "Bouton de calcul de synchronisation et résolution des dépassements",
+      "new_id": "solveBtn",
+      "element": "button",
+      "location": "Segments Toolbar",
+      "status": "preserved"
+    },
+    "stagebar": {
+      "legacy_role": "Barre de pipeline visuel des 7 étapes de production",
+      "new_id": "stagebar",
+      "element": "div",
+      "location": "Studio Stepper",
+      "status": "preserved"
+    },
+    "statDuration": {
+      "legacy_role": "Durée vidéo formatée dans les statistiques inspecteur",
+      "new_id": "statDuration",
+      "element": "b",
+      "location": "Inspector Stats Card",
+      "status": "preserved"
+    },
+    "statSegments": {
+      "legacy_role": "Nombre total de segments dans l'inspecteur",
+      "new_id": "statSegments",
+      "element": "b",
+      "location": "Inspector Stats Card",
+      "status": "preserved"
+    },
+    "statTtsEstimate": {
+      "legacy_role": "Estimation de temps de calcul TTS pour 1 heure de narration",
+      "new_id": "statTtsEstimate",
+      "element": "b",
+      "location": "Inspector Stats Card",
+      "status": "preserved"
+    },
+    "statWarnings": {
+      "legacy_role": "Nombre de segments présentant un dépassement ou avertissement",
+      "new_id": "statWarnings",
+      "element": "b",
+      "location": "Inspector Stats Card",
+      "status": "preserved"
+    },
+    "studioContent": {
+      "legacy_role": "Conteneur du studio actif lorsqu'un projet est ouvert",
+      "new_id": "studioContent",
+      "element": "div",
+      "location": "Studio View",
+      "status": "preserved"
+    },
+    "studioView": {
+      "legacy_role": "Conteneur de la vue Studio de production",
+      "new_id": "studioView",
+      "element": "section",
+      "location": "Main Workspace Router",
+      "status": "preserved"
+    },
+    "taskList": {
+      "legacy_role": "Liste des tâches d'arrière-plan avec progression et temps restant",
+      "new_id": "taskList",
+      "element": "div",
+      "location": "Inspector Tasks Card",
+      "status": "preserved"
+    },
+    "taskSummary": {
+      "legacy_role": "Résumé textuel du nombre de tâches en cours",
+      "new_id": "taskSummary",
+      "element": "small",
+      "location": "Inspector Tasks Card",
+      "status": "preserved"
+    },
+    "toast": {
+      "legacy_role": "Conteneur des notifications flottantes",
+      "new_id": "toast",
+      "element": "div",
+      "location": "Global UI Toast",
+      "status": "preserved"
+    },
+    "urlImport": {
+      "legacy_role": "Bouton de déclenchement du téléchargement de vidéo par URL",
+      "new_id": "urlImport",
+      "element": "button",
+      "location": "Studio Source Import Panel",
+      "status": "preserved"
+    },
+    "videoFile": {
+      "legacy_role": "Input d'import de fichier vidéo local",
+      "new_id": "videoFile",
+      "element": "input",
+      "location": "Studio Source Import Panel",
+      "status": "preserved"
+    },
+    "videoUrl": {
+      "legacy_role": "Champ de saisie de l'URL vidéo",
+      "new_id": "videoUrl",
+      "element": "input",
+      "location": "Studio Source Import Panel",
+      "status": "preserved"
+    }
+  }
+}

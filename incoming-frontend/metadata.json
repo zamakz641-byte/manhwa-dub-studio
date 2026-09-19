@@ -1,0 +1,6 @@
+{
+  "name": "Manhwa Dub Studio",
+  "description": "Studio professionnel de production audiovisuelle pour le doublage de webtoons et manhwas en français avec Qwen et OmniVoice.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

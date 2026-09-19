@@ -1,0 +1,16 @@
+{
+  "family": "omnivoice",
+  "variant": "clone",
+  "model_root": "D:\\manhwa studio\\anime_manga_manhua_dubbing_app\\models\\tts-omnivoice-hq",
+  "output_path": "D:\\manhwa studio\\manhwa du\\work\\omnivoice_qwen_clone_test\\fr_naturelle_06_omnivoice.wav",
+  "text": "Il pensait que tout était terminé. Trahi par son propre ami au cœur de l'apocalypse, il avait perdu sa famille, ses alliés et jusqu'à son dernier espoir. Mais lorsqu'il ouvrit les yeux, il se retrouva plusieurs années dans le passé. Cette fois, il connaissait chaque piège, chaque mensonge et chaque ennemi. Et il n'allait laisser personne lui voler sa seconde chance.",
+  "language": "fr",
+  "num_step": 12,
+  "speed": 1.05,
+  "seed": 42,
+  "sample": {
+    "path": "D:\\manhwa studio\\anime_manga_manhua_dubbing_app\\data\\voice-profiles\\local-b81c33ac0fbc4188888101b19bd679c2\\processed\\9a556950ed5d4e05ba6ad3b347b595ca.clean.wav",
+    "reference_text": "La princesse aux cheveux argentés lui ordonne d'ôter une autre malédiction au héros blond. Crash obéit. Son pouvoir sombre...",
+    "prompt_cache_path": "D:\\manhwa studio\\manhwa du\\voices\\omnivoice_fr_naturelle_06.pt"
+  }
+}

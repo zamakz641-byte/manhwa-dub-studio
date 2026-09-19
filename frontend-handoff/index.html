@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Manhwa Dub Studio</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/app-v2.css">
+  <link rel="stylesheet" href="/static/app-v3.css">
+  <style>.project-card h3,.kpi-grid b{font-family:Inter,"Segoe UI",sans-serif;font-variant-numeric:tabular-nums}</style>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <button class="brand" data-view="home" aria-label="Accueil">
+        <span class="brand-mark">M</span><span><strong>MANHWA</strong><small>DUB STUDIO</small></span>
+      </button>
+      <nav>
+        <button class="nav-item active" data-view="home"><span>⌂</span>Projets</button>
+        <button class="nav-item" data-view="studio"><span>◫</span>Studio</button>
+        <button class="nav-item" data-view="runtime"><span>◇</span>Runtime</button>
+      </nav>
+      <div class="sidebar-foot">
+        <div class="engine-line"><i id="globalDot"></i><span><b>Local engine</b><small id="globalStatus">Diagnostic…</small></span></div>
+        <button class="nav-item" id="refreshRuntime"><span>↻</span>Actualiser</button>
+      </div>
+    </aside>
+
+    <main>
+      <header class="topbar">
+        <div><p class="eyebrow" id="eyebrow">ESPACE DE TRAVAIL</p><h1 id="pageTitle">Vos projets</h1></div>
+        <div class="top-actions"><label class="search-box"><span>⌕</span><input id="projectSearch" placeholder="Rechercher un projet"></label><span class="local-pill">● 100% LOCAL</span><button class="primary" id="newProject">＋ Nouveau projet</button></div>
+      </header>
+
+      <section id="homeView" class="view active">
+        <div class="hero-grid">
+          <article class="hero-card">
+            <div class="hero-copy"><span class="kicker">STUDIO DE PRODUCTION LOCAL</span><h2>Du recap brut au dub final.</h2><p>Une chaîne complète pour comprendre l’histoire, écrire un script français rythmé, générer les voix et livrer un montage synchronisé.</p><div class="hero-actions"><button class="primary large" id="heroNew">Créer un projet <span>→</span></button><button class="ghost large" data-view="studio">Ouvrir le studio</button></div><div class="hero-proof"><span>✓ Whisper local</span><span>✓ Qwen CUDA</span><span>✓ Export GPU</span></div></div>
+            <div class="hero-visual" aria-hidden="true"><div class="visual-grid"></div><div class="moon"></div><div class="panel p1"><i></i><b>SCÈNE 01</b></div><div class="panel p2"><i></i><b>SCÈNE 02</b></div><div class="panel p3"></div><div class="wave"></div><span class="live-render">● RENDER READY</span></div>
+          </article>
+          <article class="health-card"><div class="section-head"><div><p class="eyebrow">MOTEURS</p><h3>Prêt à produire</h3></div><span class="score" id="runtimeScore">0/5</span></div><div id="healthList" class="health-list"></div></article>
+        </div>
+        <div class="kpi-grid"><article><span>PROJETS</span><b id="kpiProjects">0</b><small>dans la bibliothèque</small></article><article><span>CONTENU TRAITÉ</span><b id="kpiMinutes">0 min</b><small>durée totale importée</small></article><article><span>PIPELINES PRÊTS</span><b id="kpiReady">0</b><small>exports terminés</small></article><article class="accent-kpi"><span>MOTEUR QWEN</span><b id="kpiEngine">1,93×</b><small>débit mesuré sur secteur</small></article></div>
+        <div class="section-head projects-head"><div><p class="eyebrow">BIBLIOTHÈQUE</p><h2>Projets récents</h2></div><div class="filters"><button class="chip active">Tous</button><button class="chip">En cours</button><button class="chip">Terminés</button></div></div>
+        <div id="projectGrid" class="project-grid"></div>
+      </section>
+
+      <section id="studioView" class="view">
+        <div id="emptyStudio" class="empty-state"><span>◫</span><h2>Aucun projet ouvert</h2><p>Choisissez un projet récent ou créez-en un nouveau.</p><button class="primary" data-view="home">Voir les projets</button></div>
+        <div id="studioContent" hidden>
+          <div class="project-banner"><div><span class="kicker" id="projectStatus">BROUILLON</span><h2 id="projectName">Projet</h2></div><div class="project-meta"><label>Voix <select id="projectVoice"></select></label><span id="projectLang">AUTO → FR</span><span id="projectDuration">00:00</span><button class="ghost" id="cleanupBtn">Nettoyer le cache</button></div></div>
+          <div class="stagebar" id="stagebar"></div>
+          <div class="studio-layout">
+            <section class="workbench">
+              <div id="importPanel" class="panel-card">
+                <div class="panel-heading"><div><p class="eyebrow">ÉTAPE 01 · SOURCE</p><h2>Importer le recap original</h2><p class="muted">Vidéo locale ou URL YouTube. Le média source reste intact.</p></div><span class="panel-number">01</span></div>
+                <label class="dropzone" id="dropzone"><input type="file" id="videoFile" accept="video/*"><span class="drop-icon">⇧</span><strong>Déposez une vidéo ici</strong><small>MP4, MKV, MOV, WEBM · cliquez pour parcourir</small></label>
+                <div class="source-features"><span><b>01</b> Analyse visuelle</span><span><b>02</b> Transcription locale</span><span><b>03</b> Découpage narratif</span></div>
+                <div class="or"><span>ou importer depuis le web</span></div><div class="url-row"><input id="videoUrl" placeholder="Collez une URL YouTube…"><button class="secondary" id="urlImport">Importer l’URL</button></div>
+              </div>
+              <div id="segmentsPanel" class="panel-card" hidden><div class="section-head"><div><p class="eyebrow">REVIEW MODE</p><h2>Timeline narrative</h2></div><div class="segment-actions"><button class="secondary" id="downloadPack">Exporter Script Pack</button><label class="secondary file-button">Importer script<input type="file" id="scriptFile" accept="application/json"></label><button class="secondary" id="generateAllBtn">Générer toutes les voix</button><button class="primary" id="solveBtn">Résoudre la timeline</button></div></div><div class="segment-toolbar"><label><span>⌕</span><input id="segmentSearch" placeholder="Rechercher dans les segments…"></label><div class="pagination"><button class="ghost" id="prevSegments">←</button><span id="segmentPageLabel">1 / 1</span><button class="ghost" id="nextSegments">→</button></div></div><div id="segmentList" class="segment-list"></div></div>
+            </section>
+            <aside class="inspector">
+              <div class="inspector-head"><p class="eyebrow">PROGRESSION</p><strong id="progressLabel">0%</strong></div><div class="progress"><i id="progressBar"></i></div>
+              <div class="task-card"><div class="task-title"><span>TÂCHES ACTIVES</span><small id="taskSummary">Aucune</small></div><div id="taskList" class="task-list"><p>Les étapes apparaîtront ici.</p></div></div>
+              <div class="next-card"><span>PROCHAINE ÉTAPE</span><h3 id="nextTitle">Importer une vidéo</h3><p id="nextCopy">Ajoutez un fichier local ou une URL YouTube.</p><button class="primary full" id="nextAction">Commencer</button></div>
+              <div class="export-card"><span>PRESET D’EXPORT</span><select id="exportPreset"></select><small id="exportPresetInfo">Chargement…</small><button class="secondary full" id="exportNowBtn">Exporter avec ce preset</button></div>
+              <div class="stats"><div><span>Segments</span><b id="statSegments">—</b></div><div><span>Durée</span><b id="statDuration">—</b></div><div><span>Alertes sync</span><b id="statWarnings">—</b></div><div><span>Estimation Qwen / 1 h</span><b id="statTtsEstimate">≈ 31 min</b></div></div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section id="runtimeView" class="view"><div class="runtime-hero"><p class="eyebrow">DIAGNOSTIC LOCAL</p><h2>Modèles & dépendances</h2><p>Cette app réutilise les moteurs installés. Aucun téléchargement automatique.</p></div><div id="runtimeGrid" class="runtime-grid"></div></section>
+    </main>
+  </div>
+
+  <dialog id="projectDialog"><form method="dialog" id="projectForm"><button class="dialog-close" value="cancel">×</button><p class="eyebrow">NOUVEAU PROJET</p><h2>Préparer un nouveau dub</h2><label>Nom du projet<input id="newTitle" required placeholder="Ex. Martial God — Chapitres 1 à 12"></label><label>Langue cible<select id="newLanguage"><option value="fr">Français</option><option value="en">Anglais</option><option value="es">Espagnol</option><option value="de">Allemand</option><option value="pt">Portugais</option></select></label><label>Voix Qwen<select id="newVoice"></select></label><div class="dialog-actions"><button value="cancel" class="ghost">Annuler</button><button value="default" class="primary" id="createProject">Créer le projet</button></div></form></dialog>
+  <div id="toast" class="toast"></div>
+  <link rel="stylesheet" href="/static/tasks.css">
+  <script src="/static/app.js"></script>
+</body>
+</html>

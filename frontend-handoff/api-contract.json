@@ -1,0 +1,32 @@
+{
+  "baseUrl": "relative to the current origin",
+  "routes": [
+    {"method": "GET", "path": "/api/runtime", "purpose": "runtime, GPU and performance status"},
+    {"method": "GET", "path": "/api/voices", "purpose": "available French voices"},
+    {"method": "GET", "path": "/api/export-presets", "purpose": "export preset definitions"},
+    {"method": "GET", "path": "/api/projects", "purpose": "project list"},
+    {"method": "POST", "path": "/api/projects", "json": ["title", "target_language", "voice_id"], "purpose": "create project"},
+    {"method": "GET", "path": "/api/projects/{projectId}", "purpose": "full project and segments"},
+    {"method": "PATCH", "path": "/api/projects/{projectId}", "json": ["voice_id"], "purpose": "update project"},
+    {"method": "GET", "path": "/api/projects/{projectId}/tasks", "purpose": "progress and state of every pipeline task"},
+    {"method": "POST", "path": "/api/projects/{projectId}/tasks/analyze", "purpose": "start analysis"},
+    {"method": "POST", "path": "/api/projects/{projectId}/tasks/tts", "purpose": "start batch TTS"},
+    {"method": "POST", "path": "/api/projects/{projectId}/tasks/export", "purpose": "start export", "json": ["preset"]},
+    {"method": "POST", "path": "/api/projects/{projectId}/source", "headers": ["X-Filename"], "body": "raw video bytes", "purpose": "import local video"},
+    {"method": "POST", "path": "/api/projects/{projectId}/source-url", "json": ["url"], "purpose": "import video URL"},
+    {"method": "PATCH", "path": "/api/projects/{projectId}/segments/{segmentId}", "json": ["rewritten_text"], "purpose": "save rewritten segment"},
+    {"method": "POST", "path": "/api/projects/{projectId}/segments/{segmentId}/tts", "purpose": "generate one segment"},
+    {"method": "GET", "path": "/api/projects/{projectId}/frames/{filename}", "purpose": "segment thumbnail"},
+    {"method": "GET", "path": "/api/projects/{projectId}/audio/{segmentId}", "purpose": "preview generated voice"},
+    {"method": "GET", "path": "/api/projects/{projectId}/script-pack", "purpose": "download JSON for ChatGPT rewriting"},
+    {"method": "POST", "path": "/api/projects/{projectId}/script", "body": "rewritten script JSON", "purpose": "reimport ChatGPT result"},
+    {"method": "POST", "path": "/api/projects/{projectId}/solve", "purpose": "solve timing and overlaps"},
+    {"method": "POST", "path": "/api/projects/{projectId}/cleanup", "purpose": "remove safe temporary cache"}
+  ],
+  "taskStates": ["idle", "queued", "running", "completed", "failed"],
+  "notes": [
+    "A task may expose progress from 0 to 100 plus a status message.",
+    "Keep user-facing actions disabled while their matching task is queued or running.",
+    "Do not hardcode 127.0.0.1:8765 in fetch calls; use relative URLs."
+  ]
+}
