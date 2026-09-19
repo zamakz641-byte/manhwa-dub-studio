@@ -33,3 +33,24 @@ Les tâches longues s'exécutent en arrière-plan avec progression, compteur, te
 ## Performance Qwen mesurée
 
 Le benchmark reproductible `tools/benchmark_qwen.py`, relancé sur secteur, a produit 184,4 secondes de narration française en 95,8 secondes après préchauffage, soit 1,925× temps réel et environ 31,2 minutes de calcul pour une heure audio. Le rapport est conservé dans `work/qwen_benchmark_secteur/report.json`.
+
+## Installation pour le développement
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+python app.py
+```
+
+Le frontend React se trouve dans `frontend-react` :
+
+```powershell
+cd frontend-react
+npm install
+npm run build
+```
+
+## Contenu non versionné
+
+Les modèles IA, voix clonées, runtimes partagés, vidéos source, projets utilisateur, caches et exports ne sont pas publiés. Ils doivent être installés ou configurés localement.
